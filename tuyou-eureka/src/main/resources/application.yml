@@ -7,7 +7,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
   instance:
-    hostname: localhost
+    hostname: 192.168.40.35
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
     lease-renewal-interval-in-seconds: 30
