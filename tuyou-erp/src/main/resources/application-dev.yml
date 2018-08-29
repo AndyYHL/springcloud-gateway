@@ -16,7 +16,7 @@ eureka:
     fetch-registry: true
 spring:
   application:
-    name: tuyou-gateway
+    name: tuyou-erp
   datasource:
     url: jdbc:mysql://106.14.115.145:3306/erp?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useUnicode=true&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: jdl
