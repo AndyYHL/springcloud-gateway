@@ -1,0 +1,20 @@
+server:
+  port: 81
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+    lease-renewal-interval-in-seconds: 30
+    status-page-url-path: /hello
+    health-check-url-path: /hello
+spring:
+  application:
+    name: tuyou-eureka
+logging:
+  config: classpath:log4j2.xml

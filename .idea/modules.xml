@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/platform.iml" filepath="$PROJECT_DIR$/platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tuyou-erp/tuyou-erp.iml" filepath="$PROJECT_DIR$/tuyou-erp/tuyou-erp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tuyou-eureka/tuyou-eureka.iml" filepath="$PROJECT_DIR$/tuyou-eureka/tuyou-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tuyou-gateway/tuyou-gateway.iml" filepath="$PROJECT_DIR$/tuyou-gateway/tuyou-gateway.iml" />
+    </modules>
+  </component>
+</project>

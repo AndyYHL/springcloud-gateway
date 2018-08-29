@@ -1,0 +1,36 @@
+server:
+  port: 80
+eureka:
+  port: 81
+  instance:
+    hostname: localhost
+    prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
+    lease-renewal-interval-in-seconds: 30
+  client:
+    #服务注册中心
+    service-url:
+     defaultZone: http://${eureka.instance.hostname}:${eureka.port}/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+spring:
+  application:
+    name: tuyou-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: 163                     #网关路由到网易官网
+        uri: http://www.163.com/
+        predicates:
+          - Path=/163/**
+#      - id: ORDER-SERVICE           #网关路由到订单服务order-service
+#        uri: lb://ORDER-SERVICE
+#        predicates:
+#          - Path=/ORDER-SERVICE/**
+#      - id: USER-SERVICE            #网关路由到用户服务user-service
+#        uri: lb://USER-SERVICE
+#        predicates:
+#          - Pach=/USER-SERVICE/**
+
