@@ -3,7 +3,7 @@ server:
 eureka:
   port: 81
   instance:
-    hostname: localhost
+    hostname: 106.14.115.145
     prefer-ip-address: true
     ip-address: ${spring.cloud.inetutils.default-ip-address}
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
