@@ -1,0 +1,48 @@
+server:
+  port: 85
+eureka:
+  port: 81
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    ip-address: ${spring.cloud.inetutils.default-ip-address}
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+    lease-renewal-interval-in-seconds: 30
+  client:
+    #服务注册中心
+    service-url:
+     defaultZone: http://${eureka.instance.hostname}:${eureka.port}/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+spring:
+  application:
+    name: tuyou-gateway
+  datasource:
+    url: jdbc:mysql://106.14.115.145:3306/order?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useUnicode=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: jdl
+    password: hakeny1985213
+    type:  com.alibaba.druid.pool.DruidDataSource
+    initialSize: 1
+    minIdle: 3
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,slf4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    useGlobalDataSourceStat: true
+  cloud:
+    inetutils:
+     default-ip-address: 127.0.0.1
+     default-hostname: 127.0.0.1
+     preferred-networks: 127.0.0.1
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  config: classpath:log4j2.xml
