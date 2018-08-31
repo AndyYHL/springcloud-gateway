@@ -22,6 +22,10 @@
         <module>tuyou-eureka</module>
         <module>tuyou-gateway</module>
         <module>tuyou-erp</module>
+        <module>tuyou-crm</module>
+        <module>tuyou-marketing</module>
+        <module>tuyou-order</module>
+        <module>tuyou-ty</module>
     </modules>
 
     <properties>
