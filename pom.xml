@@ -26,6 +26,7 @@
         <module>tuyou-marketing</module>
         <module>tuyou-order</module>
         <module>tuyou-ty</module>
+        <module>tuyou-common</module>
     </modules>
 
     <properties>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <!-- 指定数据连接驱动jar地址 -->
+    <classPathEntry
+            location="C:/Users/Administrator/.m2/repository/mysql/mysql-connector-java/5.1.34/mysql-connector-java-5.1.34.jar"/>
+    <!--<classPathEntry
+            location="D:/.m2/repository/mysql/mysql-connector-java/5.1.34/mysql-connector-java-5.1.34.jar"/>-->
+
+    <!-- 一个数据库一个context -->
+    <context id="infoGuardian">
+        <!-- generate entity时，生成serialVersionUID -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+        <!-- genenat entity时,生成toString -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+        <!-- 分页插件 -->
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+
+        <!-- 注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="false"/>
+            <!-- 是否取消注释 -->
+            <property name="suppressDate" value="true"/>
+            <!-- 是否生成注释代时间戳 -->
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+
+
+
+        <!-- jdbc连接 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://106.14.115.145:3306/erp"
+                        userId="jdl" password="hakeny1985213"/>
+
+        <!-- 类型转换 -->
+        <javaTypeResolver>
+            <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- ENTITY -->
+        <javaModelGenerator targetPackage="com.xdjk.model.erp" targetProject="D:/workspace/jkworkspace/model/model/src/main/java">
+            <property name="enableSubPackages" value="false"/>
+        </javaModelGenerator>
+
+        <!-- MAPPER -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- DAO -->
+        <javaClientGenerator targetPackage="com.tuyou.tuyouerp.dao" targetProject="./src/main/java"
+                             type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!-- 配置表信息 -->
+        <!--
+        schema即为数据库名
+        tableName为对应的数据库表
+        domainObjectName是要生成的实体类
+        -->
+        <table tableName="%" ></table>
+
+    </context>
+</generatorConfiguration>
