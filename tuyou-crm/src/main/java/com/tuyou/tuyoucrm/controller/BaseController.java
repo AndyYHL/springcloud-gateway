@@ -1,6 +1,7 @@
 package com.tuyou.tuyoucrm.controller;
 
-import com.tuyou.common.response.ResponseModel;
+
+import com.tuyou.common.ResponseModel;
 import org.springframework.http.HttpStatus;
 
 /**
