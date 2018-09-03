@@ -31,7 +31,7 @@ public class TestController extends BaseController{
 
         int count = enterpriseService.count(bean);
         if (count > 0) {
-            List<Enterprise> beans = enterpriseService.search(bean, bean.getPageIndex(), bean.getPageSize(), null);
+            List<Enterprise> beans = enterpriseService.search(bean, bean.getCurrentPage(), bean.getPageSize(), null);
             //List<MstFeedbackModel> models = Convertor.copyDataList(beans, MstFeedbackModel.class);
             response.setList(beans);
 
