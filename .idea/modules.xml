@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/platform.iml" filepath="$PROJECT_DIR$/platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tuyou-common/tuyou-common.iml" filepath="$PROJECT_DIR$/tuyou-common/tuyou-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/tuyou-crm/tuyou-crm.iml" filepath="$PROJECT_DIR$/tuyou-crm/tuyou-crm.iml" />
       <module fileurl="file://$PROJECT_DIR$/tuyou-erp/tuyou-erp.iml" filepath="$PROJECT_DIR$/tuyou-erp/tuyou-erp.iml" />
       <module fileurl="file://$PROJECT_DIR$/tuyou-eureka/tuyou-eureka.iml" filepath="$PROJECT_DIR$/tuyou-eureka/tuyou-eureka.iml" />
