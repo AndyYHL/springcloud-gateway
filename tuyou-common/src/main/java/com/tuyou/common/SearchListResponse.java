@@ -13,6 +13,10 @@ public class SearchListResponse<T> extends BaseModel {
 
     private List<T> list;
 
+    private Integer pageSize;
+
+    private Integer currentPage;
+
     public Integer getTotal() {
         return total;
     }
@@ -27,5 +31,22 @@ public class SearchListResponse<T> extends BaseModel {
 
     public void setList(List<T> list) {
         this.list = list;
+    }
+    public Integer getPageSize() {
+
+        return pageSize == null || pageSize < 0 ? 0 : pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public Integer getCurrentPage() {
+
+        return currentPage == null || currentPage < 0 ? 0 : currentPage;
+    }
+
+    public void setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
     }
 }
