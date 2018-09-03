@@ -11,6 +11,7 @@ public class TuyouGatewayApplicationTests {
 
     @Test
     public void contextLoads() {
+
     }
 
 }

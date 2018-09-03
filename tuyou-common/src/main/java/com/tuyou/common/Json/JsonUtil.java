@@ -1,4 +1,4 @@
-package com.tuyou.common;
+package com.tuyou.common.Json;
 
 import org.apache.http.HttpStatus;
 
