@@ -14,5 +14,5 @@ public class CommonConstant {
     /**
      *无效
      */
-    public static final int  BOOL_FALSE = 1;
+    public static final int  BOOL_FALSE = 0;
 }
