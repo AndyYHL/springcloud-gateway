@@ -4,6 +4,7 @@ import com.tuyou.common.Json.JsonUtil;
 import com.tuyou.tuyouerp.service.EnterpriseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.xdjk.model.erp.Enterprise;
 
@@ -26,7 +27,7 @@ public class TestController extends BaseController{
 
         return "Hello World!";
     }
-    @RequestMapping("/list")
+    @RequestMapping(value = "/list",method = RequestMethod.POST,produces = {"application/json;charset=UTF-8"})
     private JsonUtil list(JsonUtil jsonUtil){
         Enterprise entity=(Enterprise)jsonUtil.getData();
         if(entity==null){
