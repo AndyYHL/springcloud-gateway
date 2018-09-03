@@ -1,8 +1,8 @@
 package com.tuyou.tuyouerp.controller;
 
+import com.tuyou.common.PageParameter;
 import com.tuyou.common.SearchListResponse;
 import com.tuyou.tuyouerp.service.EnterpriseService;
-import com.xdjk.model.common.PageParameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
