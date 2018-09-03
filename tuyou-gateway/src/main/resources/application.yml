@@ -33,4 +33,3 @@ spring:
 #        uri: lb://USER-SERVICE
 #        predicates:
 #          - Pach=/USER-SERVICE/**
-

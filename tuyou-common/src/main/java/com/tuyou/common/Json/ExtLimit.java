@@ -1,4 +1,4 @@
-package com.tuyou.common;
+package com.tuyou.common.Json;
 
 public class ExtLimit {
     private Integer pagestart; //开始的条数

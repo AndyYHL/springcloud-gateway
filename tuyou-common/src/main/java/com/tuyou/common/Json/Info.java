@@ -1,4 +1,4 @@
-package com.tuyou.common;
+package com.tuyou.common.Json;
 
 public class Info {
     private String type; //模块
