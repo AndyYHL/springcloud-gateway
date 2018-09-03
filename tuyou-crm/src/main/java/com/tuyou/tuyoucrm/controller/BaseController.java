@@ -1,7 +1,6 @@
 package com.tuyou.tuyoucrm.controller;
 
 
-import com.tuyou.common.ResponseModel;
 import org.springframework.http.HttpStatus;
 
 /**
@@ -9,14 +8,6 @@ import org.springframework.http.HttpStatus;
  */
 public abstract class BaseController {
 
-    protected ResponseModel getSuccess() {
-        ResponseModel response = new ResponseModel();
-
-        response.setMessage(HttpStatus.OK.getReasonPhrase());
-        response.setStatus(HttpStatus.OK.value());
-
-        return response;
-    }
 
 
 
