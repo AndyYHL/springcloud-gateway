@@ -3,7 +3,7 @@ server:
 eureka:
   port: 81
   instance:
-    hostname: localhost
+    hostname: 114.251.122.180
     prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
     lease-renewal-interval-in-seconds: 30
   client:

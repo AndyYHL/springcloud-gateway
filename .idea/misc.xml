@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="Kotlin2JsCompilerArguments">
     <option name="sourceMapEmbedSources" />
     <option name="sourceMapPrefix" />
@@ -9,6 +8,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/tuyou-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/tuyou-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/tuyou-erp/pom.xml" />
+        <option value="$PROJECT_DIR$/tuyou-crm/pom.xml" />
+        <option value="$PROJECT_DIR$/tuyou-order/pom.xml" />
+        <option value="$PROJECT_DIR$/tuyou-marketing/pom.xml" />
+        <option value="$PROJECT_DIR$/tuyou-ty/pom.xml" />
       </list>
     </option>
   </component>
