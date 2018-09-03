@@ -12,7 +12,7 @@ import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
-/*@Component
+@Component
 public class CheckGatewayFilterFactory extends AbstractGatewayFilterFactory<Object> {
     @Override
     public GatewayFilter apply(Object config) {
@@ -28,8 +28,8 @@ public class CheckGatewayFilterFactory extends AbstractGatewayFilterFactory<Obje
             Info info = new Info();
             info.setStatus(HttpStatus.SC_SWITCHING_PROTOCOLS);
             info.setMessage("未登录或登录超时");
-            /*//*/不合法
-            ServerHttpResponse response = exchange.getResponse();
+            //不合法
+            /*ServerHttpResponse response = exchange.getResponse();
             //设置headers
             HttpHeaders httpHeaders = response.getHeaders();
             httpHeaders.add("Content-Type", "application/json; charset=UTF-8");
@@ -40,10 +40,10 @@ public class CheckGatewayFilterFactory extends AbstractGatewayFilterFactory<Obje
             jsonPackage.setMessage("未登录或登录超时");
             DataBuffer bodyDataBuffer = response.bufferFactory().wrap(jsonPackage.toJSONString().getBytes());
 
-            return response.writeWith(Mono.just(bodyDataBuffer));*//*
+            return response.writeWith(Mono.just(bodyDataBuffer));*/
             ServerHttpResponse response = exchange.getResponse();
             DataBuffer bodyDataBuffer = response.bufferFactory().wrap(JSON.toJSONString(jsonUtil).getBytes());
             return response.writeWith(Mono.just(bodyDataBuffer));
         };
     }
-}*/
+}
