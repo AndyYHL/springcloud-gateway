@@ -13,13 +13,13 @@ import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
 @Component
-public class CheckGatewayFilterFactory extends AbstractGatewayFilterFactory<Object> {
+public class JwtCheckGatewayFilterFactory extends AbstractGatewayFilterFactory<Object> {
     @Override
     public GatewayFilter apply(Object config) {
         return (exchange, chain) -> {
             String jwtToken = exchange.getRequest().getHeaders().getFirst("token");
             //校验jwtToken的合法性
-            if (CheckCodeUtil.verifyToken(jwtToken)) {
+            if (!CheckCodeUtil.verifyToken(jwtToken)) {
                 //合法
                 return chain.filter(exchange);
             }
@@ -28,6 +28,7 @@ public class CheckGatewayFilterFactory extends AbstractGatewayFilterFactory<Obje
             Info info = new Info();
             info.setStatus(HttpStatus.SC_SWITCHING_PROTOCOLS);
             info.setMessage("未登录或登录超时");
+            jsonUtil.setInfo(info);
             //不合法
             /*ServerHttpResponse response = exchange.getResponse();
             //设置headers

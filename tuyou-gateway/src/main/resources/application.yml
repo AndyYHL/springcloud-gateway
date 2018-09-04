@@ -6,6 +6,8 @@ eureka:
     hostname: 114.251.122.180
     prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
     lease-renewal-interval-in-seconds: 30
+    status-page-url-path: /actuator/info
+    health-check-url-path: /actuator/health
   client:
     #服务注册中心
     service-url:
@@ -17,6 +19,9 @@ spring:
     name: tuyou-gateway
   cloud:
     gateway:
+      default-filters:
+        - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+        - PrefixPath=/httpbin
       discovery:
         locator:
           enabled: true
@@ -25,6 +30,9 @@ spring:
         uri: http://www.163.com/
         predicates:
           - Path=/163/**
+        filters:
+          - StripPrefix= 0
+          - JwtCheck
 #      - id: ORDER-SERVICE           #网关路由到订单服务order-service
 #        uri: lb://ORDER-SERVICE
 #        predicates:
