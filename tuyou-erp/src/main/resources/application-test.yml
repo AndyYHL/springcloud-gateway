@@ -3,7 +3,7 @@ server:
 eureka:
   port: 81
   instance:
-    hostname: 114.251.122.180
+    hostname: 127.0.0.1
     prefer-ip-address: true
     ip-address: ${spring.cloud.inetutils.default-ip-address}
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
@@ -18,9 +18,9 @@ spring:
   application:
     name: tuyou-gateway
   datasource:
-    url: jdbc:mysql://106.14.115.145:3306/erp?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useUnicode=true&zeroDateTimeBehavior=convertToNull&useSSL=false
-    username: jdl
-    password: hakeny1985213
+    url: jdbc:mysql://127.0.0.1:3306/erp?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useUnicode=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: root
     type:  com.alibaba.druid.pool.DruidDataSource
     initialSize: 1
     minIdle: 3
