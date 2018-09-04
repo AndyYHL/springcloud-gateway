@@ -3,7 +3,7 @@ package com.tuyou.tuyouerp.controller;
 import org.springframework.http.HttpStatus;
 
 /**
- * @author wudi
+ * @author luyy
  */
 public abstract class BaseController {
 
