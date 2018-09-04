@@ -40,7 +40,7 @@
         </javaTypeResolver>
 
         <!-- ENTITY -->
-        <javaModelGenerator targetPackage="com.xdjk.model.erp" targetProject="D:/workspace/jkworkspace/model/model/src/main/java">
+        <javaModelGenerator targetPackage="com.xdjk.model.erp" targetProject="D:/workspace/jkworkspace/model/src/main/java">
             <property name="enableSubPackages" value="false"/>
         </javaModelGenerator>
 

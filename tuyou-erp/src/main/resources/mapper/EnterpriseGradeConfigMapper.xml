@@ -14,9 +14,9 @@
     <result column="station_name" jdbcType="VARCHAR" property="stationName" />
     <result column="gas_integral" jdbcType="INTEGER" property="gasIntegral" />
     <result column="gas_discount" jdbcType="DOUBLE" property="gasDiscount" />
-    <result column="diesel_integral" jdbcType="INTEGER" property="dieselIntegral" />
+    <result column="diesel_integral" jdbcType="DOUBLE" property="dieselIntegral" />
     <result column="diesel_discount" jdbcType="DOUBLE" property="dieselDiscount" />
-    <result column="recharge_integral" jdbcType="INTEGER" property="rechargeIntegral" />
+    <result column="recharge_integral" jdbcType="DOUBLE" property="rechargeIntegral" />
     <result column="grade_type" jdbcType="TINYINT" property="gradeType" />
     <result column="status" jdbcType="TINYINT" property="status" />
     <result column="created_id" jdbcType="INTEGER" property="createdId" />
@@ -157,8 +157,8 @@
       created_name)
     values (#{gradeConfigId,jdbcType=INTEGER}, #{gradeConfigName,jdbcType=VARCHAR}, #{enterpriseId,jdbcType=INTEGER}, 
       #{enterpriseName,jdbcType=VARCHAR}, #{stationId,jdbcType=INTEGER}, #{stationName,jdbcType=VARCHAR}, 
-      #{gasIntegral,jdbcType=INTEGER}, #{gasDiscount,jdbcType=DOUBLE}, #{dieselIntegral,jdbcType=INTEGER}, 
-      #{dieselDiscount,jdbcType=DOUBLE}, #{rechargeIntegral,jdbcType=INTEGER}, #{gradeType,jdbcType=TINYINT}, 
+      #{gasIntegral,jdbcType=INTEGER}, #{gasDiscount,jdbcType=DOUBLE}, #{dieselIntegral,jdbcType=DOUBLE}, 
+      #{dieselDiscount,jdbcType=DOUBLE}, #{rechargeIntegral,jdbcType=DOUBLE}, #{gradeType,jdbcType=TINYINT}, 
       #{status,jdbcType=TINYINT}, #{createdId,jdbcType=INTEGER}, #{createdTime,jdbcType=TIMESTAMP}, 
       #{createdName,jdbcType=VARCHAR})
   </insert>
@@ -244,13 +244,13 @@
         #{gasDiscount,jdbcType=DOUBLE},
       </if>
       <if test="dieselIntegral != null">
-        #{dieselIntegral,jdbcType=INTEGER},
+        #{dieselIntegral,jdbcType=DOUBLE},
       </if>
       <if test="dieselDiscount != null">
         #{dieselDiscount,jdbcType=DOUBLE},
       </if>
       <if test="rechargeIntegral != null">
-        #{rechargeIntegral,jdbcType=INTEGER},
+        #{rechargeIntegral,jdbcType=DOUBLE},
       </if>
       <if test="gradeType != null">
         #{gradeType,jdbcType=TINYINT},
@@ -311,13 +311,13 @@
         gas_discount = #{record.gasDiscount,jdbcType=DOUBLE},
       </if>
       <if test="record.dieselIntegral != null">
-        diesel_integral = #{record.dieselIntegral,jdbcType=INTEGER},
+        diesel_integral = #{record.dieselIntegral,jdbcType=DOUBLE},
       </if>
       <if test="record.dieselDiscount != null">
         diesel_discount = #{record.dieselDiscount,jdbcType=DOUBLE},
       </if>
       <if test="record.rechargeIntegral != null">
-        recharge_integral = #{record.rechargeIntegral,jdbcType=INTEGER},
+        recharge_integral = #{record.rechargeIntegral,jdbcType=DOUBLE},
       </if>
       <if test="record.gradeType != null">
         grade_type = #{record.gradeType,jdbcType=TINYINT},
@@ -353,9 +353,9 @@
       station_name = #{record.stationName,jdbcType=VARCHAR},
       gas_integral = #{record.gasIntegral,jdbcType=INTEGER},
       gas_discount = #{record.gasDiscount,jdbcType=DOUBLE},
-      diesel_integral = #{record.dieselIntegral,jdbcType=INTEGER},
+      diesel_integral = #{record.dieselIntegral,jdbcType=DOUBLE},
       diesel_discount = #{record.dieselDiscount,jdbcType=DOUBLE},
-      recharge_integral = #{record.rechargeIntegral,jdbcType=INTEGER},
+      recharge_integral = #{record.rechargeIntegral,jdbcType=DOUBLE},
       grade_type = #{record.gradeType,jdbcType=TINYINT},
       status = #{record.status,jdbcType=TINYINT},
       created_id = #{record.createdId,jdbcType=INTEGER},
@@ -394,13 +394,13 @@
         gas_discount = #{gasDiscount,jdbcType=DOUBLE},
       </if>
       <if test="dieselIntegral != null">
-        diesel_integral = #{dieselIntegral,jdbcType=INTEGER},
+        diesel_integral = #{dieselIntegral,jdbcType=DOUBLE},
       </if>
       <if test="dieselDiscount != null">
         diesel_discount = #{dieselDiscount,jdbcType=DOUBLE},
       </if>
       <if test="rechargeIntegral != null">
-        recharge_integral = #{rechargeIntegral,jdbcType=INTEGER},
+        recharge_integral = #{rechargeIntegral,jdbcType=DOUBLE},
       </if>
       <if test="gradeType != null">
         grade_type = #{gradeType,jdbcType=TINYINT},
@@ -433,9 +433,9 @@
       station_name = #{stationName,jdbcType=VARCHAR},
       gas_integral = #{gasIntegral,jdbcType=INTEGER},
       gas_discount = #{gasDiscount,jdbcType=DOUBLE},
-      diesel_integral = #{dieselIntegral,jdbcType=INTEGER},
+      diesel_integral = #{dieselIntegral,jdbcType=DOUBLE},
       diesel_discount = #{dieselDiscount,jdbcType=DOUBLE},
-      recharge_integral = #{rechargeIntegral,jdbcType=INTEGER},
+      recharge_integral = #{rechargeIntegral,jdbcType=DOUBLE},
       grade_type = #{gradeType,jdbcType=TINYINT},
       status = #{status,jdbcType=TINYINT},
       created_id = #{createdId,jdbcType=INTEGER},
