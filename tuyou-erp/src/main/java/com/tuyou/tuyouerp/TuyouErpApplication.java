@@ -17,6 +17,7 @@ import java.util.List;
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@MapperScan("com.tuyou.tuyouerp")
 public class TuyouErpApplication {
     /**
      * 添加第三方json工具
