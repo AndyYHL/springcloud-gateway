@@ -1,5 +1,6 @@
 package com.tuyou.tuyouerp.controller;
 
+import com.google.common.base.Converter;
 import com.tuyou.common.Json.JsonUtil;
 import com.tuyou.tuyouerp.service.EnterpriseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,9 +31,9 @@ public class TestController extends BaseController{
     }
     @RequestMapping(value = "/list",method = RequestMethod.POST)
     private JsonUtil list(@RequestBody  JsonUtil jsonUtil){
-        Enterprise entity=(Enterprise)jsonUtil.getData();
-        if(entity==null){
-            entity=new Enterprise();
+        Enterprise entity=new Enterprise();
+        if(jsonUtil.getData()==null){
+             entity=(Enterprise)jsonUtil.getData();
         }
         int count = enterpriseService.count(entity);
         List<Enterprise> list=new ArrayList<Enterprise>();
